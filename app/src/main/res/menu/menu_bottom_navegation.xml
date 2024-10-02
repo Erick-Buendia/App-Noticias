@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fragmentNews"
+        android:icon="@drawable/icon_news"
+        android:title="Generales"></item>
+    <item
+        android:id="@+id/fragmentBusiness"
+        android:icon="@drawable/icon_business"
+        android:title="Negocios"></item>
+    <item
+        android:id="@+id/fragmentSports"
+        android:icon="@drawable/icon_sports"
+        android:title="Deportes"></item>
+</menu>

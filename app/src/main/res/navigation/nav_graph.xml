@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentNews">
+    <fragment
+        android:id="@+id/fragmentNews"
+        android:name="com.erick.buendia.appnoticias.view.news.FragmentGeneral"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_general">
+        <action
+            android:id="@+id/action_fragmentNews2_to_newsDetailActivity"
+            app:destination="@id/newsDetailActivity"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBusiness"
+        android:name="com.erick.buendia.appnoticias.view.news.FragmentBusiness"
+        android:label="fragment_business"
+        tools:layout="@layout/fragment_business" >
+        <action
+            android:id="@+id/action_fragmentBusiness_to_newsDetailActivity"
+            app:destination="@id/newsDetailActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSports"
+        android:name="com.erick.buendia.appnoticias.view.news.FragmentSports"
+        android:label="fragment_sports"
+        tools:layout="@layout/fragment_sports" >
+        <action
+            android:id="@+id/action_fragmentSports_to_newsDetailActivity"
+            app:destination="@id/newsDetailActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/newsActivity"
+        android:name="com.erick.buendia.appnoticias.view.NewsActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+
+    <activity
+        android:id="@+id/newsDetailActivity"
+        android:name="com.erick.buendia.appnoticias.view.detail.NewsDetailActivity"
+        android:label="activity_news_detail"
+        tools:layout="@layout/activity_news_detail">
+
+        <argument
+            android:name="news"
+            app:argType="com.erick.buendia.appnoticias.data.model.Article"
+            app:nullable="true" />
+    </activity>
+
+
+</navigation>
